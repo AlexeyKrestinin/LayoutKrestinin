@@ -1,26 +1,101 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="csM-ze-wHK">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="RaZ-Nm-cqv">
+            <objects>
+                <tabBarController id="csM-ze-wHK" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="KA5-Ly-wgy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="bQJ-Gu-O05"/>
+                        <segue destination="T1s-aA-ZgV" kind="relationship" relationship="viewControllers" id="Ua8-Nc-GQf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ptc-0B-5mS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2222" y="-205"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LayoutKrestinin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="1YG-Rn-94x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1084" y="-750"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="HZl-KP-tLi">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQU-Yo-30O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="T1s-aA-ZgV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7OB-2k-owM"/>
+                        <viewControllerLayoutGuide type="bottom" id="fAc-r2-Xax"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O8Q-4P-MJV">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fW-bc-zCz">
+                                <rect key="frame" x="392" y="980" width="240" height="205"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="LVa-wb-QIH">
+                                <rect key="frame" x="20" y="20" width="984" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xej-A9-T1Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="656" height="128"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yyx-qk-OC3">
+                                        <rect key="frame" x="656" y="0.0" width="328" height="128"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Xej-A9-T1Q" firstAttribute="width" secondItem="Yyx-qk-OC3" secondAttribute="width" multiplier="2" id="G6o-Eb-1Ai"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6fW-bc-zCz" firstAttribute="top" secondItem="LVa-wb-QIH" secondAttribute="bottom" id="20W-ul-lDM"/>
+                            <constraint firstItem="LVa-wb-QIH" firstAttribute="top" secondItem="7OB-2k-owM" secondAttribute="bottom" id="ECL-WN-EBP"/>
+                            <constraint firstItem="LVa-wb-QIH" firstAttribute="trailing" secondItem="O8Q-4P-MJV" secondAttribute="trailingMargin" id="JWK-Kt-BKd"/>
+                            <constraint firstItem="LVa-wb-QIH" firstAttribute="top" secondItem="7OB-2k-owM" secondAttribute="bottom" id="LPJ-hy-sHb"/>
+                            <constraint firstItem="LVa-wb-QIH" firstAttribute="leading" secondItem="O8Q-4P-MJV" secondAttribute="leadingMargin" id="wjb-dX-8vo"/>
+                            <constraint firstItem="LVa-wb-QIH" firstAttribute="centerX" secondItem="O8Q-4P-MJV" secondAttribute="centerX" id="wwb-37-EEV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="KIw-zs-B5B"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1084.5703125" y="345.68081991215223"/>
         </scene>
     </scenes>
 </document>
